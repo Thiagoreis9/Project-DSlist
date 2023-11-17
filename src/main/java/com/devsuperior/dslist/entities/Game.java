@@ -15,7 +15,6 @@ import jakarta.persistence.Table;
 @Table(name = "tb_game")
 @RequestMapping(value = "/games")
 public class Game {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -34,7 +33,6 @@ public class Game {
 	private String longDescription;
 	
 	public Game() {
-		
 	}
 
 	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
@@ -138,5 +136,4 @@ public class Game {
 		Game other = (Game) obj;
 		return Objects.equals(id, other.id);
 	}
-
 }
